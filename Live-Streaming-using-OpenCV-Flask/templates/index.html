@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.min.css') }}" >
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>Webcam Streaming with YOLO</title>
+</head>
+<body>
+    <meta http-equiv="refresh" content="10;url='./save_feed'">
+    <section>
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+      </section>
+      <section>
+        <h1>Let's Do It</h1>
+      </section>
+        <input value={{index}} type="hidden" id="index"/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+<!--            <center>-->
+            <div id="video">
+            <img src="{{ url_for('video_feed') }}" width="40%" vspace="10" border="10">
+            </div>
+
+<!--            </center>-->
+        </div>
+    </div>
+</div>
+<div>
+    <script type='text/javascript'>
+    //이미지 배열
+
+
+        var images = new Array(2);
+        images[0] = "static/images/book.jpg";
+        images[1] = "static/images/bowl.jpg";
+        images[2] = "static/images/cup.jpg";
+        images[3] = "static/images/fork.jpg";
+        images[4] = "static/images/mouse.jpg";
+        images[5] = "static/images/spoon.jpg";
+        images[6] = "static/images/toothbrush.jpg";
+        images[7] = "static/images/cellphone.jpg";
+    //이미지 설명 배열
+        var caption = new Array(2);
+        caption[0] = "찾아야 할 것 : 책";
+        caption[1] = "찾아야 할 것 : 그릇";
+        caption[2] = "찾아야 할 것 : 컵";
+        caption[3] = "찾아야 할 것 : 포크";
+        caption[4] = "찾아야 할 것 : 마우스";
+        caption[5] = "찾아야 할 것 : 숟가락";
+        caption[6] = "찾아야 할 것 : 칫솔";
+        caption[7] = "찾아야 할 것 : 핸드폰";
+
+
+
+        index = Number(document.getElementById('index').value)
+        document.write("<img src='" + images[index] + "' width='30%' border='10px'></a><p><span>"
+                                   + caption[index] + "</span></p>");
+    </script>
+    </div>
+
+
+</body>
+</html>

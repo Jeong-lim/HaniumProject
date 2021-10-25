@@ -1,0 +1,188 @@
+/*title*/
+@import url("https://fonts.googleapis.com/earlyaccess/nanumpenscript.css");
+@import url("https://fonts.googleapis.com/earlyaccess/hanna.css");
+body,
+html {
+  background: radial-gradient(circle, #FFDEE9	 0%, #FFE4E1 100%);
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  font-family: "Hanna", cursive;
+}
+
+h1 {
+  margin: 0;
+  font-size: 8em;
+  padding: 0;
+  color: white;
+  text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black, 0.05em 0.005em 0 black, 0em 0.08em 0 black, 0.05em 0.08em 0 black, 0px -0.03em 0 black, -0.03em -0.03em 0 black, -0.03em 0.08em 0 black, -0.03em 0 0 black;
+}
+h1 span {
+  transform: scale(0.9);
+  display: inline-block;
+}
+h1 span:first-child {
+  -webkit-animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+          animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+h1 span:last-child {
+  -webkit-animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+          animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+@-webkit-keyframes bop {
+  0% {
+    transform: scale(0.9);
+  }
+  50%, 100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bop {
+  0% {
+    transform: scale(0.9);
+  }
+  50%, 100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes bopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%, 100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}
+@keyframes bopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%, 100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}
+
+/*text*/
+
+p, a {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  font-family: "Hanna", monospace;
+  font-smoothing: antialiased;
+  margin: 0.8em 0;
+  font-size: 35px;
+  color: #FF607F;
+}
+
+.ghost,
+.glitch {
+  opacity: 0.25;
+}
+
+#message {
+  margin-left: -300px;
+  margin-top: -130px;
+  position: absolute;
+  height: 260px;
+  width: 1100px;
+  left: 30%;
+  top: 30%;
+}
+
+#animate {
+  text-shadow: 0 0 8px rgba(209, 194, 165, 0.1);
+  position: bottom;
+  color: #DC6089;
+  bottom: 0;
+}
+
+#container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+#container:before {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: 0;
+  top: 0;
+}
+
+/* button */
+@import url("https://fonts.googleapis.com/earlyaccess/hanna.css");
+button {
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  weight: 300px;
+  height: 150px;
+  bottom: 100px;
+  align: center;
+
+}
+button.learn-more {
+  font-family: "Nanum Pen Script";
+  font-size: 40px;
+  font-weight: 1000;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.learn-more::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0.75em, -1em);
+          transform: translate3d(0, 0.75em, -1em);
+  transition: box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.learn-more:hover {
+  background: #ffe9e9;
+  -webkit-transform: translate(0, 0.25em);
+          transform: translate(0, 0.25em);
+}
+button.learn-more:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0.5em, -1em);
+          transform: translate3d(0, 0.5em, -1em);
+}
+button.learn-more:active {
+  background: #ffe9e9;
+  -webkit-transform: translate(0em, 0.75em);
+          transform: translate(0em, 0.75em);
+}
+button.learn-more:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0, -1em);
+          transform: translate3d(0, 0, -1em);
+} 
